@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form action="/logout" method="post">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+<div>
+    <form method="post">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+        <input type="text" name="P" placeholder="Введите давление" />
+        <input type="text" name="U" placeholder="Укажите напряжение" />
+        <input type="text" name="W" placeholder="Укажите вращение" />
+        <input type="number" name="id" placeholder="Укажите номер станка" />
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+{{#conditions}}
+<div>
+    <b>{{P}}</b>
+    <b>{{U}}</b>
+    <b>{{W}}</b>
+    <b>{{id}}</b>
+</div>
+{{/conditions}}
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+
+    <title>repair_manager</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <a class="navbar-brand text-white mb-0 mr-5 h1"><img src="https://lh5.ggpht.com/iOAUy7o5T_WI97jwtfmEL-ZJ_LCoiHdcgzgWvh97k2fJ1ypna4t3Lir6DI8zvqgHB1A=w140" width="30" height="30" alt="logo">Open-Mind</a>
+          <ul class="nav nav-pills mr-auto ml-4" id="navbarNav">
+                <li class="nav-item">
+                  <button class="nav-link btn btn-secondary  btn-md page-btn1 text-white active" data-toggle="pill"role="tab" href="#repairTab">Ремонты</button>
+                </li>
+                  <li class="nav-item">
+                    <button class="nav-link btn btn-secondary btn-md page-btn1 text-white" data-toggle="pill" role="tab" href="#repairworker" >Рабочие</button>
+                  </li>
+        </ul>
+    </nav>
+    <!--Общий контейнер-->
+    <div class="container-fluid">
+    <div class="row">
+
+
+    <!--Меню слева-->
+    <div class="card-body col-2 ml-1" style="border-left-color: #696969; border-left-style: solid;
+    border-left-width: 5px;
+    padding-left: 10px;">
+        <li class="label align-self-start" >
+          <div class="label" data-toggle="collapse" data-target="#collapseOne">
+            <svg class="bi bi-caret-down-fill"   width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 01.753 1.659l-4.796 5.48a1 1 0 01-1.506 0z"/>
+          </svg>Панель 1
+          </div>
+          <div id="collapseOne" class="collapse ml-4">
+            <div class="label"  data-toggle="collapse" data-target="#collapseOneOne">
+              Под 1
+            </div>
+            <div id="collapseOneOne" class="collapse ml-4">
+              Подраделsdfsdfsdfsdfsdfsdf
+            </div>
+          </div>
+        </li>
+
+        <li class="label align-self-start ">
+          <div class="label"  data-toggle="collapse" data-target="#collapseTwo">
+            <svg class="bi bi-caret-down-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 01.753 1.659l-4.796 5.48a1 1 0 01-1.506 0z"/>
+            </svg>Панель 2
+          </div>
+          <div id="collapseTwo" class="collapse ml-4">
+            раздел 2
+          </div>
+        </li>
+        <li class="label align-self-start ">
+          <div class="label"  data-toggle="collapse" data-target="#collapseThree">
+            <svg class="bi bi-caret-down-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 01.753 1.659l-4.796 5.48a1 1 0 01-1.506 0z"/>
+            </svg>Панель 3
+          </div>
+          <div id="collapseThree" class="collapse ml-4">
+          раздел 3
+          </div>
+        </li>
+    </div>
+
+    <!--Вкладки-->
+    <div class="col-9" style="border-left-color: #696969; border-left-style: solid;
+    border-left-width: 3px;
+    padding-left: 3px;">
+
+      <div class="tab-content container">
+
+        <!-- Вкладка ремонта-->
+
+        <div class="tab-pane fade active show text-body" role="tabpanel" id=repairTab>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="accordion container-fluid m-0 p-0" >
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#rep1" aria-expanded="true" aria-controls="collapseOne">
+                        Ремонт станка №10
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div id="rep1" class="collapse" >
+                    <div class="card-body">
+                      <div class="container-fluid collapse show" id="prestan1">
+                        <div class="row">
+                      Справочная информация о ремоте станка<br>
+                      и о том, какому рабочему можно выполнять эту работу
+                      <br><br><br>
+                      </div>
+                      <div class="row justify-content-md-center">
+                      <button class="btn btn-primary col-6"  data-toggle="modal" data-target="#appoint" aria-expanded="true" data-toggle="collapse">Назначить рабочему</button>
+                          <!-- Модальное окно заявки на ремонт-->
+                          <div class="modal fade" id="appoint" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl " role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="staticBackdropLabel">Заявка на ремонт</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                      </button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                              <label class="input-group-text" for="inputGroupSelect01">Рабочий</label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect01">
+                                              <option selected></option>
+                                              <option value="1">Иванов</option>
+                                              <option value="2">Петров</option>
+                                              <option value="3">Зубков</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="input-group mb-3 ">
+                                          <div class="input-group-prepend ml-3">
+                                            <label class="btn btn-outline-secondary" type="button" id="button-addon1">Комментарий к ремонту</label>
+                                          </div>
+                                          <input type="text" class="form-control mr-3" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                        </div>
+                                        <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Зыкрыть</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Назначить</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#rep2" aria-expanded="false" aria-controls="collapseTwo">
+                        Ремонт станка №1
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="rep2" class="collapse" >
+                    <div class="card-body">
+                      <div class="container-fluid">
+                      Справочная информация о ремоте станка
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" >
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#rep3" aria-expanded="false" aria-controls="collapseThree">
+                        Ремонт станка №3
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="rep3" class="collapse" >
+                    <div class="card-body">
+                      <div class="container-fluid">
+                    Справочная информация о ремоте станка
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- Вкладка рабочих-->
+      <div class="tab-pane fade active text-body" role="tabpanel" id=repairworker>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="accordion container-fluid m-0 p-0" >
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#stan1" aria-expanded="true" aria-controls="collapseOne">
+                      Рабочий Иванов
+                    </button>
+                  </h5>
+                </div>
+                <div id="stan1" class="collapse" >
+                  <div class="card-body">
+                    <div class="container-fluid collapse show" id="prestan1">
+                      <div class="row">
+                    Информация о рабочем<br><br>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#stan2" aria-expanded="false" aria-controls="collapseTwo">
+                      Рабочий Петров
+                    </button>
+                  </h5>
+                </div>
+                <div id="stan2" class="collapse" >
+                  <div class="card-body">
+                    <div class="container-fluid">
+                    Информация о рабочем
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" >
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#stan3" aria-expanded="false" aria-controls="collapseThree">
+                      Рабочий Зубков
+                    </button>
+                  </h5>
+                </div>
+                <div id="stan3" class="collapse" >
+                  <div class="card-body">
+                    <div class="container-fluid">
+                  Информация о рабочем
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

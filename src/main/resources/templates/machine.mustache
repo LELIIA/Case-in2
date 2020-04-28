@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form action="/logout" method="post">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+<div>
+    <form method="post">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+        <input type="number" name="id" placeholder="Введите номер станка" />
+        <input type="text" name="status" placeholder="Укажите статус" />
+        <input type="number" name="on_off" placeholder="1 или 0" />
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+<div>Список станков</div>
+<!-- <form method="post" action="filter">
+     <input type="text" name="filter">
+     <button type="submit">Найти</button>
+ </form>-->
+{{#machines}}
+<div>
+    <b>{{id}}</b>
+    <b>{{status}}</b>
+    <b>{{on_off}}</b>
+</div>
+{{/machines}}
+</body>
+</html>
